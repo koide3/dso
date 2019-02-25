@@ -126,6 +126,7 @@ struct FrameHessian
 
 
 	int frameID;						// incremental ID for keyframes only!
+	double timestamp;
 	static int instanceCounter;
 	int idx;
 

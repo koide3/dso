@@ -808,6 +808,8 @@ void FullSystem::addActiveFrame( ImageAndExposure* image, int id )
 
 	// =========================== add into allFrameHistory =========================
 	FrameHessian* fh = new FrameHessian();
+	fh->timestamp = image->timestamp;
+
 	FrameShell* shell = new FrameShell();
 	shell->camToWorld = SE3(); 		// no lock required, as fh is not used anywhere yet.
 	shell->aff_g2l = AffLight(0,0);
